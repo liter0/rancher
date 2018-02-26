@@ -1,0 +1,5 @@
+name: 统一消息管理
+description: |
+  消息推送、编辑、删除管理.
+version: 5.1.0-201605-GA
+category: ECM
