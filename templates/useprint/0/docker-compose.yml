@@ -1,44 +1,14 @@
-alfresco:
+elbv1:
+  image: rancher/external-lb:v0.2.1
+  command: -provider=elbv1
+  expose: 
+   - 1000
   environment:
-    CIFS_ENABLED: 'false'
-    FTP_ENABLED: 'false'
+    ELBV1_AWS_ACCESS_KEY: ${ELBV1_AWS_ACCESS_KEY}
+    ELBV1_AWS_SECRET_KEY: ${ELBV1_AWS_SECRET_KEY}
+    ELBV1_AWS_REGION: ${ELBV1_AWS_REGION}
+    ELBV1_AWS_VPCID: ${ELBV1_AWS_VPCID}
+    ELBV1_USE_PRIVATE_IP: ${ELBV1_USE_PRIVATE_IP}
   labels:
-    io.rancher.sidekicks: alfresco-data
-  tty: true
-  image: webcenter/rancher-alfresco:v5.1-201605-1
-  links:
-  - postgres:db
-  stdin_open: true
-  ports:
-  - 8080:8080/tcp
-  volumes_from:
-    - alfresco-data
-alfresco-data:
-  labels:
-    io.rancher.container.start_once: 'true'
-  image: alpine
-  volumes:
-  - /opt/alfresco/alf_data
-  net: none
-  command: /bin/true
-postgres:
-  environment:
-    PGDATA: /var/lib/postgresql/data/pgdata
-    POSTGRES_DB: ${database_name}
-    POSTGRES_PASSWORD: ${database_password}
-    POSTGRES_USER: ${database_user}
-  labels:
-    io.rancher.sidekicks: postgres-data
-  tty: true
-  image: postgres:9.4
-  stdin_open: true
-  volumes_from:
-    - postgres-data
-postgres-data:
-  labels:
-    io.rancher.container.start_once: 'true'
-  image: alpine
-  volumes:
-  - /var/lib/postgresql/data/pgdata
-  net: none
-  command: /bin/true
+    io.rancher.container.create_agent: "true"
+    io.rancher.container.agent.role: "external-dns"

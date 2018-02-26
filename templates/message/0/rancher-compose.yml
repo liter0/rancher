@@ -1,51 +1,68 @@
+version: '2'
+services:
+  guacamole:
+    scale: 1
+    health_check:
+      healthy_threshold: 2
+      response_timeout: 2000
+      port: 8080
+      unhealthy_threshold: 3
+      initializing_timeout: 60000
+      interval: 2000
+      strategy: recreate
+      request_line: GET "/guacamole" "HTTP/1.0"
+      reinitializing_timeout: 60000
+  guacd:
+    scale: 1
+    health_check:
+      healthy_threshold: 2
+      response_timeout: 2000
+      port: 4822
+      unhealthy_threshold: 3
+      initializing_timeout: 60000
+      interval: 2000
+      strategy: recreate
+      reinitializing_timeout: 60000
+  setup-get-db-script:
+    scale: 1
+  database:
+    scale: 1
+    health_check:
+      healthy_threshold: 2
+      response_timeout: 2000
+      port: 3306
+      unhealthy_threshold: 3
+      initializing_timeout: 60000
+      interval: 2000
+      strategy: recreate
+      reinitializing_timeout: 60000
 .catalog:
-  name: "Alfresco"
-  version: "5.1.0-201605-GA"
-  description: "Alfresco Electronic Document Management"
-  uuid: alfresco-5.1-201605-1
-  minimum_rancher_version: v0.56.0
+  name: "apache-guacamole"
+  version: "0.1-rancher1"
+  description: " Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH."
+  minimum_rancher_version: v0.46.0
   questions:
-    - variable: database_name
-      description: "Name of the Alfresco database"
-      label: "Database name"
-      type: "string"
+    - variable: "guacamole_db"
+      label: "MySQL Database Name"
+      description: "Your MYSQL guacamole database name"
+      default: "guacamole_db"
       required: true
-      default: "alfresco"
-    - variable: database_user
-      description: "Login for the Alfresco database"
-      label: "Database login"
       type: "string"
+    - variable: "guacamole_user"
+      label: "MySQL Database User"
+      description: "Your MYSQL guacamole user name"
       required: true
-      default: "alfresco"
-    - variable: database_password
-      description: "Password for the Alfresco database"
-      label: "Database password"
+      default: "guacamole_user"
       type: "string"
+    - variable: "guacamole_password"
+      label: "MySQL Database Password"
+      description: "Your MYSQL guacamole user password. Defaults to \"guacamole_password\""
       required: true
-      default: "alfresco"
-
-alfresco:
-  scale: 1
-  health_check:
-    port: 8080
-    interval: 5000
-    unhealthy_threshold: 3
-    strategy: recreate
-    healthy_threshold: 3
-    response_timeout: 5000
-
-postgres:
-  scale: 1
-  health_check:
-    port: 5432
-    interval: 5000
-    unhealthy_threshold: 3
-    strategy: recreate
-    response_timeout: 5000
-    healthy_threshold: 3
-
-postgres-data:
-  scale: 1
-
-alfresco-data:
-  scale: 1
+      default: "guacamole_password"
+      type: "password"
+    - variable: "public_port"
+      label: "Public Port"
+      description: "The public port that Guacamole listens on, defaults to 8080"
+      required: true
+      default: 8080
+      type: "int"

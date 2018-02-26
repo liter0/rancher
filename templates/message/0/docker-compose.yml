@@ -1,44 +1,49 @@
-alfresco:
-  environment:
-    CIFS_ENABLED: 'false'
-    FTP_ENABLED: 'false'
+database-data:
+  image: busybox
   labels:
-    io.rancher.sidekicks: alfresco-data
-  tty: true
-  image: webcenter/rancher-alfresco:v5.1-201605-1
+    io.rancher.container.start_once: 'true'
+  net: none
+  entrypoint: /bin/true
+  volumes:
+    - /var/lib/mysql
+    - /docker-entrypoint-initdb.d
+database:
+  image: mariadb
+  environment:
+    MYSQL_DATABASE: ${guacamole_db}
+    MYSQL_ONETIME_PASSWORD: 'true'
+    MYSQL_PASSWORD: ${guacamole_password}
+    MYSQL_RANDOM_ROOT_PASSWORD: 'true'
+    MYSQL_USER: ${guacamole_user}
+  volumes_from:
+    - database-data
+  labels:
+    io.rancher.sidekicks: setup-get-db-script, database-data
+setup-get-db-script:
+  image: glyptodon/guacamole:0.9.10-incubating
+  net: none
+  volumes_from:
+    - database-data
+  command:
+  - bash
+  - -c
+  - /opt/guacamole/bin/initdb.sh --mysql > /docker-entrypoint-initdb.d/initdb.sql
+  labels:
+    io.rancher.container.start_once: 'true'
+guacd:
+  image: glyptodon/guacd:0.9.10-incubating
+guacamole:
+  image: glyptodon/guacamole:0.9.10-incubating
+  environment:
+    MYSQL_DATABASE: ${guacamole_db}
+    MYSQL_HOSTNAME: database
+    MYSQL_PASSWORD: ${guacamole_password}
+    MYSQL_USER: ${guacamole_user}
   links:
-  - postgres:db
-  stdin_open: true
+   - guacd:guacd
   ports:
-  - 8080:8080/tcp
-  volumes_from:
-    - alfresco-data
-alfresco-data:
-  labels:
-    io.rancher.container.start_once: 'true'
-  image: alpine
-  volumes:
-  - /opt/alfresco/alf_data
-  net: none
-  command: /bin/true
-postgres:
-  environment:
-    PGDATA: /var/lib/postgresql/data/pgdata
-    POSTGRES_DB: ${database_name}
-    POSTGRES_PASSWORD: ${database_password}
-    POSTGRES_USER: ${database_user}
-  labels:
-    io.rancher.sidekicks: postgres-data
-  tty: true
-  image: postgres:9.4
-  stdin_open: true
-  volumes_from:
-    - postgres-data
-postgres-data:
-  labels:
-    io.rancher.container.start_once: 'true'
-  image: alpine
-  volumes:
-  - /var/lib/postgresql/data/pgdata
-  net: none
-  command: /bin/true
+    - ${public_port}:8080/tcp
+  command:
+    - /bin/bash
+    - -c
+    - cd /usr/local/tomcat/webapps;rm -rf ROOT/; ln -s guacamole.war ROOT.war; /opt/guacamole/bin/start.sh;
