@@ -1,5 +1,8 @@
-name: 投资项目管理
+name: 投资管理
 description: |
-  投资项目生命周期管理.
-version: 5.1.0-201605-GA
-category: ECM
+  无
+version: 3.4.10-rancher1
+category: Clustering
+maintainer: "Raul Sanchez <rawmind@gmail.com>"
+projectURL: https://github.com/rawmind0/alpine-zk
+license: 
