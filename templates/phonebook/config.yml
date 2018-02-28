@@ -1,5 +1,5 @@
-name: 通讯露管理
+name: 通讯录管理
 description: |
-  无.
-version: 5.1.0-201605-GA
-category: ECM
+  记录公司所有员工的联系方式，便于员工间的相互联系.
+version: 0.0.1
+category: BMXD

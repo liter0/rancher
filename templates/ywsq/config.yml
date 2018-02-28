@@ -1,5 +1,5 @@
 name: 业务授权管理
 description: |
-  无
-version: 6.0.1
-category: Collaboration
+  当OA用户（授权人）由于出差等原因，无法对OA系统的事项进行处理，但又不想延误事项的办理的时候，可以通过业务授权管理模块，将自己在OA系统中的文档处理权限转交给被授权人处理
+version: 0.0.1
+category: BMXD

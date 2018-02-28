@@ -1,5 +1,5 @@
 name: 舆情动态报送管理
 description: |
-  无
-version: 6.0.1
-category: Collaboration
+  该模块一般由企业的专门人员负责，搜集企业内外与本企业相关的、对企业有较大影响的新闻、事件或舆论信息，上报给企业的管理人员，共管理人员参考，便于及时作出相应的对策
+version: 0.0.1
+category: BMXD
