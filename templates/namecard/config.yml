@@ -1,5 +1,5 @@
-name: 明片管理
+name: 名片管理
 description: |
-  无
+  可以把名片内容提交给管理人员审核，审核完毕后，提交到打印管理岗位，制作标准格式名片
 version: 0.0.1
 category: BMXD
