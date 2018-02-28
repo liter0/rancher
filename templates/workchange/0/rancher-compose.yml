@@ -1,8 +1,8 @@
-version: '2'
+version: '1'
 
 catalog:
 
-  name: bitbucket
+  name: workchange
   version: 0.0.1
   description: Git Server
   questions:
@@ -14,11 +14,11 @@ catalog:
 
 services:
 
-  bitbucket:
+  workchange:
     scale: 1
     start_on_create: true
 
-  bitbucket-data:
+  workchange-data:
     scale: 1
     start_on_create: true
 

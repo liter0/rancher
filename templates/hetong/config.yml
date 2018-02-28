@@ -1,5 +1,5 @@
 name: 合同管理
 description: |
-  无
-version: 6.0.1
-category: Collaboration
+  对公司所有合同进行登记，并可以上载合同正本，进行系统存档。系统的分类查询功能，可以对所有合同进行快速检索，便于对合同内容的管理
+version: 0.0.1
+category: BMXD

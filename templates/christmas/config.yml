@@ -1,6 +1,6 @@
 name: 圣诞管理
 description: |
-  无
-version: 3.0-rancher1
-category: Agile
+  企业员工参与网上摇号，随机抽取自己圣诞礼物的赠与对象，在圣诞庆祝活动中为对方带来惊喜
+version: 0.0.1
+category: BMXD
 

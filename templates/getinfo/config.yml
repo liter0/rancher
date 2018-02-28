@@ -1,5 +1,5 @@
 name: 收文统计管理
 description: |
-    无
-version: v0.2
-category: CMS
+    公文统计还有定时统计功能，根据事先设定的时间，定时对所有公文进行统计，生成统计报表，并向相关管理人员发送待办信息，提醒查看统计结果
+version: 0.0.1
+category: BMXD

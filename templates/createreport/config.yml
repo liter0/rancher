@@ -1,6 +1,6 @@
 name: 签报管理
 description: |
-  无
-version: 3.0-rancher1
-category: Agile
+  签报是公司内部上下级之间或部门之间报告和请示工作、通报情况的文书工具博明信德OA的签报管理 对签报也采用签报类型和签报字号的二级分类方式，可以满足企业所有签报的分类要求
+version: 0.0.1
+category: BMXD
 

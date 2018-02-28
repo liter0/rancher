@@ -1,5 +1,5 @@
 name: 工作简报管理
 description: |
-  无
-version: 6.0.1
-category: Collaboration
+  通过工作简报管理系统，可以起草各种类型的工作简报，系统为每种类型的简报配备了不同的模板，只要选定了工作简报的类型，就可以合成标准格式的工作简报，经相关人员审核后，可以把合成后的简报发送到企业各部门
+version: 0.0.1
+category: BMXD

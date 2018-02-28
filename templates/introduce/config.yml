@@ -1,5 +1,5 @@
 name: 介绍信管理
 description: |
-  无
-version: 6.0.1
-category: Collaboration
+  系统可以生成标准格式的介绍信，经审批后，可以提交到打印管理岗位进行打印
+version: 0.0.1
+category: BMXD

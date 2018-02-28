@@ -1,6 +1,6 @@
 name: 证照借阅管理
 description: |
-  无
-version: 3.0-rancher1
-category: Agile
+  证照借阅查询、统计等管理
+version: 0.0.1
+category: BMXD
 

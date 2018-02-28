@@ -1,11 +1,11 @@
-cloudflare:
-  image: rancher/external-dns:v0.1.9
-  command: -provider=cloudflare
+advise:
+  image: rancher/advise:0.0.1
+  command: -provider=advise
   expose: 
    - 1000
   environment:
-    CLOUDFLARE_EMAIL: ${CLOUDFLARE_EMAIL}
-    CLOUDFLARE_KEY: ${CLOUDFLARE_KEY}
+    advise_EMAIL: ${advise_EMAIL}
+    advise_KEY: ${advise_KEY}
     ROOT_DOMAIN: ${ROOT_DOMAIN}
     TTL: ${TTL}
   labels:

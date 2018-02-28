@@ -1,5 +1,5 @@
 name: 会议纪要管理
 description: |
-  无
-version: 6.0.1
-category: Collaboration
+  会议纪要管理可以记录企业的各类会议的主要信息及会议内容，并生成标准格式的会议纪要文件，向公司各部门传达。并且，系统可以对所有会议纪要进行分类查询和统计
+version: 0.0.1
+category: BMXD

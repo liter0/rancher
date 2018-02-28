@@ -1,31 +1,31 @@
 .catalog:
-  name: "Confluence"
-  version: "5.10.6"
+  name: "workweek"
+  version: "0.0.1"
   description: "Create, organize, and discuss work with your team"
   questions:
     - variable: "context_path"
       label: "Context path"
       description: |
-        The context path under which Confluence will be available
+        The context path under which workweek will be available
       type: "string"
-      default: "/confluence"
+      default: "/workweek"
       required: true
     - variable: "proxy_name"
       label: "Proxy name"
       description: |
-        When behind a proxy, specify the name through which clients will connect to Confluence. For example: confluence.mycompany.com
+        When behind a proxy, specify the name through which clients will connect to workweek. For example: workweek.mycompany.com
       type: "string"
       required: false
     - variable: "proxy_port"
       label: "Proxy port"
       description: |
-        When behind a proxy, specify the port through which clients will connect to Confluence
+        When behind a proxy, specify the port through which clients will connect to workweek
       type: "int"
       required: false
     - variable: "proxy_scheme"
       label: "Proxy scheme"
       description: |
-        When behind a proxy, specify the protocol clients will use to connect to Confluence
+        When behind a proxy, specify the protocol clients will use to connect to workweek
       type: "enum"
       options:
         - http
@@ -51,13 +51,13 @@
         Service link to the database. This will be mapped to the container as 'database'
       type: "service"
       required: false
-    - variable: "confluence_home"
-      label: "Confluence home directory"
+    - variable: "workweek_home"
+      label: "workweek home directory"
       description: |
-        The location to mount the Confluence home directory on
+        The location to mount the workweek home directory on
       type: "string"
       required: true
-confluence:
+workweek:
   scale: 1
   health_check:
     port: 8090

@@ -1,5 +1,5 @@
 name: 问卷调查管理
 description: |
-  无
-version: v0.6.0-rancher1
-category: External DNS
+  对问卷调查的查询、统计管理
+version: 0.0.1
+category: BMXD

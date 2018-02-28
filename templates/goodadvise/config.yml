@@ -1,5 +1,5 @@
 name: 合理化建议管理
 description: |
-    无
-version: v0.2
-category: CMS
+    为企业全体员工提供建议的机会，且所有建议在OA系统中存档，作为对员工提供激励的依据。当员工提供的建议被接受后，在该模块中，可以直接打开督查办管理系统，对该建议进行立项督办
+version: 0.0.1
+category: BMXD

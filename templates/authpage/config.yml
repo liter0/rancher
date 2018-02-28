@@ -1,5 +1,5 @@
 name: 授权书管理
 description: |
-  无
-version: v0.6.0-rancher1
-category: External DNS
+  签报管理系统增加了特别授权书的功能，根据业务需要，在签报流转过程中，系统可以为办理人员生成特别授权书
+version: 0.0.1
+category: BMXD

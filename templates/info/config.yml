@@ -1,5 +1,5 @@
 name: 信息发布
 description: |
-  无
-version: 5.1.0-201605-GA
-category: ECM
+  对系统门户首页的新闻发布和通知公告信息栏内容进行发布
+version: 0.0.1
+category: BMXD

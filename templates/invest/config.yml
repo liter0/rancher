@@ -1,8 +1,5 @@
 name: 投资管理
 description: |
   无
-version: 3.4.10-rancher1
-category: Clustering
-maintainer: "Raul Sanchez <rawmind@gmail.com>"
-projectURL: https://github.com/rawmind0/alpine-zk
-license: 
+version: 0.0.1
+category: BMXD

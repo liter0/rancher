@@ -1,6 +1,6 @@
 name: 客户关系管理
 description: |
-  无
-version: 3.0-rancher1
-category: Agile
+  对公司客户分类、统计的管理
+version: 0.0.1
+category: BMXD
 

@@ -1,23 +1,23 @@
-version: '2'
+version: '1'
 
 services:
 
-  bitbucket:
-    image: atlassian/bitbucket-server:5.1
+  workchange:
+    image: atlassian/workchange-server:0.0.1
     volumes_from:
-      - bitbucket-data
+      - workchange-data
     ports:
-      - ${BITBUCKET_PORT}:7990
+      - ${workchange_PORT}:7990
     labels:
-      io.rancher.sidekicks: bitbucket-data
+      io.rancher.sidekicks: workchange-data
       io.rancher.container.hostname_override: container_name
 
-  bitbucket-data:
-    image: atlassian/bitbucket-server:5.1
+  workchange-data:
+    image: atlassian/workchange-server:5.1
     entrypoint:
       - /bin/true
     volumes:
-      - /var/atlassian/application-data/bitbucket
+      - /var/atlassian/application-data/workchange
     labels:
       io.rancher.container.start_once: 'true'
       io.rancher.container.hostname_override: container_name
