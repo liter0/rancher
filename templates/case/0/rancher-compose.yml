@@ -1,5 +1,5 @@
 .catalog:
-  name: "Confluence"
+  name: "case"
   version: "5.10.6"
   description: "Create, organize, and discuss work with your team"
   questions:
@@ -8,7 +8,7 @@
       description: |
         The context path under which Confluence will be available
       type: "string"
-      default: "/confluence"
+      default: "/case"
       required: true
     - variable: "proxy_name"
       label: "Proxy name"
@@ -57,7 +57,7 @@
         The location to mount the Confluence home directory on
       type: "string"
       required: true
-confluence:
+case:
   scale: 1
   health_check:
     port: 8090

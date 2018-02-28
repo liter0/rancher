@@ -1,5 +1,5 @@
 name: 案件管理
 description: |
-  无
-version: 6.0.1
-category: Collaboration
+  该模块功能一般适用于资产处置类业务，因为在资产处置类业务中，会涉及大量的业务诉讼，需要专门的系统对所有的诉讼案件进行管理
+version: 0.0.1
+category: BMXD
