@@ -1,5 +1,5 @@
 name: 督查办管理
 description: |
-  无
-version: 6.0.1
-category: Collaboration
+    为了督促公司内各项工作的办理情况。通过该模块，可以跟踪某项工作是否如期完成，并对办理部门进行立项督办，并可及时反馈处理意见，促进公司行政督查工作的规范化、制度化，提高工作效率。模块功能分为督办和查办功能
+version: 0.0.1
+category: BMXD

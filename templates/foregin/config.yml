@@ -1,6 +1,6 @@
 name: 对外联系单
 description: |
-  无
-version: 3.0-rancher1
-category: Agile
+  对外工作联系单是与外部企业的OA系统进行日常工作联系的模块之一，通过该模块，可以把工作联系的相关内容直接发送到外部企业OA系统，实现企业间信息无障碍流转
+version: 0.0.1
+category: BMXD
 

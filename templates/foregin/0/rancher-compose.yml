@@ -1,39 +1,39 @@
 .catalog:
-  name: Cloud9
+  name: foregin
   description: |
-    (Experimental) Cloud 9 SDK 
+    
   version: 3.0-rancher1
-  minimum_rancher_version: v1.0.0
+  minimum_rancher_version: v0.0.1
   maintainer: "Raul Sanchez <rawmind@gmail.com>"
-  uuid: cloud9-0
+  uuid: foregin-0
   questions:
-    - variable: "cloud9_user"
+    - variable: "foregin_user"
       description: |
         Username. 
       label: "Username:"
       default: "test"
       required: true
       type: "string"
-    - variable: "cloud9_pass"
+    - variable: "foregin_pass"
       description: |
         Password. 
       label: "Password:"
       default: "test1234"
       required: true
       type: "string"
-    - variable: "cloud9_port"
+    - variable: "foregin_port"
       description: "Port to listen"
       label: "Port:"
       required: true
       default: "8080"
       type: "int"
-    - variable: "cloud9_repo"
+    - variable: "foregin_repo"
       description: "Git repo to sync"
       label: "Git repo:"
       required: false
       default: ""
       type: "string"
-    - variable: "cloud9_publish"
+    - variable: "foregin_publish"
       label: "Publish:"
       description: "Publish service to traefik."
       default: stack
@@ -43,17 +43,17 @@
         - false
         - true
         - stack
-    - variable: "cloud9_domain"
+    - variable: "foregin_domain"
       description: "Publish service domain"
       label: "Publish domain:"
       required: true
       default: "dev.local"
       type: "string"
-cloud9-sdk:
+foregin-sdk:
   scale: 1
   retain_ip: true
   health_check:
-    port: ${cloud9_port}
+    port: ${foregin_port}
     interval: 5000
     unhealthy_threshold: 3
     request_line: ''

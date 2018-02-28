@@ -1,13 +1,13 @@
-confluence:
-  image: sanderkleykens/confluence:5.10.6
+caiwu:
+  image: sanderkleykens/caiwu:0.0.1
   restart: always
   environment:
     - CATALINA_OPTS=-Xms${heap_size} -Xmx${heap_size} ${jvm_args}
-    - CONFLUENCE_PROXY_PORT=${proxy_port}
-    - CONFLUENCE_PROXY_NAME=${proxy_name}
-    - CONFLUENCE_PROXY_SCHEME=${proxy_scheme}
-    - CONFLUENCE_CONTEXT_PATH=${context_path}
+    - caiwu_PROXY_PORT=${proxy_port}
+    - caiwu_PROXY_NAME=${proxy_name}
+    - caiwu_PROXY_SCHEME=${proxy_scheme}
+    - caiwu_CONTEXT_PATH=${context_path}
   external_links:
     - ${database_link}:database
   volumes:
-    - ${confluence_home}:/var/atlassian/confluence
+    - ${caiwu_home}:/var/atlassian/caiwu

@@ -1,5 +1,5 @@
 name: 发文管理
 description: |
-  无
-version: 5.1.0-201605-GA
-category: ECM
+  该模块可以完成一个文件从拟稿、审核、会签、签发、生成编号、合成格式、发送、归档等整个操作流程，达到快速、高效、及时处理的目的
+version: 0.0.1
+category: BMXD

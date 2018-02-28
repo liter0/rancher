@@ -1,13 +1,13 @@
-confluence:
-  image: sanderkleykens/confluence:5.10.6
+dajy:
+  image: sanderkleykens/dajy:5.10.6
   restart: always
   environment:
     - CATALINA_OPTS=-Xms${heap_size} -Xmx${heap_size} ${jvm_args}
-    - CONFLUENCE_PROXY_PORT=${proxy_port}
-    - CONFLUENCE_PROXY_NAME=${proxy_name}
-    - CONFLUENCE_PROXY_SCHEME=${proxy_scheme}
-    - CONFLUENCE_CONTEXT_PATH=${context_path}
+    - dajy_PROXY_PORT=${proxy_port}
+    - dajy_PROXY_NAME=${proxy_name}
+    - dajy_PROXY_SCHEME=${proxy_scheme}
+    - dajy_CONTEXT_PATH=${context_path}
   external_links:
     - ${database_link}:database
   volumes:
-    - ${confluence_home}:/var/atlassian/confluence
+    - ${dajy_home}:/var/atlassian/dajy

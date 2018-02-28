@@ -1,5 +1,5 @@
-confluence:
-  image: sanderkleykens/confluence:5.10.6
+case:
+  image: sanderkleykens/case:0.0.1
   restart: always
   environment:
     - CATALINA_OPTS=-Xms${heap_size} -Xmx${heap_size} ${jvm_args}
@@ -10,4 +10,4 @@ confluence:
   external_links:
     - ${database_link}:database
   volumes:
-    - ${confluence_home}:/var/atlassian/confluence
+    - ${case_home}:/var/atlassian/case

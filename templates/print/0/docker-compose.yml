@@ -1,4 +1,4 @@
-version: '2'
+version: '1'
 services:
   artifactory:
     {{- if eq .Values.ARTIFACTORY_VERSION "OSS"}}

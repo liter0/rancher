@@ -1,8 +1,8 @@
-version: '2'
+version: '1'
 services:
-  aqua-csp-service:
-    image: aquasec/csp:2.6.3
-    hostname: aqua-csp
+  person-csp-service:
+    image: aquasec/csp:0.0.1
+    hostname: person-csp
     environment:
       BATCH_INSTALL_ENFORCE_MODE: n
       BATCH_INSTALL_GATEWAY: csp
@@ -11,7 +11,7 @@ services:
       SCALOCK_GATEWAY_NAME: csp
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock
-    - /tmp/aqua-data:/var/lib/postgresql/data
+    - /tmp/person-data:/var/lib/postgresql/data
     ports:
     - ${console_port}:8080/tcp
     - 3622:3622/tcp

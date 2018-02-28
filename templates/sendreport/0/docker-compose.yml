@@ -1,15 +1,15 @@
-avi:
-  image: rancher/external-lb:v0.3.2
-  command: -provider=Avi
+sendreport:
+  image: rancher/external-lb:0.0.1
+  command: -provider=sendreport
   expose: 
    - 1000
   environment:
-    AVI_USER: ${AVI_USER}
-    AVI_PASSWORD: ${AVI_PASSWORD}
-    AVI_CONTROLLER_ADDR: ${AVI_CONTROLLER_ADDR}
-    AVI_CONTROLLER_PORT: ${AVI_CONTROLLER_PORT}
-    AVI_SSL_VERIFY: ${AVI_SSL_VERIFY}
-    AVI_CLOUD_NAME: ${AVI_CLOUD_NAME}
+    sendreport_USER: ${sendreport_USER}
+    sendreport_PASSWORD: ${sendreport_PASSWORD}
+    sendreport_CONTROLLER_ADDR: ${sendreport_CONTROLLER_ADDR}
+    sendreport_CONTROLLER_PORT: ${sendreport_CONTROLLER_PORT}
+    sendreport_SSL_VERIFY: ${sendreport_SSL_VERIFY}
+    sendreport_CLOUD_NAME: ${sendreport_CLOUD_NAME}
     LB_TARGET_RANCHER_SUFFIX: ${LB_TARGET_RANCHER_SUFFIX}
   labels:
     io.rancher.container.create_agent: "true"

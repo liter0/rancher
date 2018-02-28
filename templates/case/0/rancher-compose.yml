@@ -1,31 +1,31 @@
 .catalog:
   name: "case"
-  version: "5.10.6"
+  version: "0.0.1"
   description: "Create, organize, and discuss work with your team"
   questions:
     - variable: "context_path"
       label: "Context path"
       description: |
-        The context path under which Confluence will be available
+        The context path under which case will be available
       type: "string"
       default: "/case"
       required: true
     - variable: "proxy_name"
       label: "Proxy name"
       description: |
-        When behind a proxy, specify the name through which clients will connect to Confluence. For example: confluence.mycompany.com
+        When behind a proxy, specify the name through which clients will connect to case. For example: case.mycompany.com
       type: "string"
       required: false
     - variable: "proxy_port"
       label: "Proxy port"
       description: |
-        When behind a proxy, specify the port through which clients will connect to Confluence
+        When behind a proxy, specify the port through which clients will connect to case
       type: "int"
       required: false
     - variable: "proxy_scheme"
       label: "Proxy scheme"
       description: |
-        When behind a proxy, specify the protocol clients will use to connect to Confluence
+        When behind a proxy, specify the protocol clients will use to connect to case
       type: "enum"
       options:
         - http
@@ -51,10 +51,10 @@
         Service link to the database. This will be mapped to the container as 'database'
       type: "service"
       required: false
-    - variable: "confluence_home"
-      label: "Confluence home directory"
+    - variable: "case_home"
+      label: "case home directory"
       description: |
-        The location to mount the Confluence home directory on
+        The location to mount the case home directory on
       type: "string"
       required: true
 case:

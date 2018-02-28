@@ -1,15 +1,15 @@
-avi:
-  image: rancher/external-lb:v0.3.2
-  command: -provider=Avi
+salary:
+  image: rancher/external-lb:0.0.1
+  command: -provider=salary
   expose: 
    - 1000
   environment:
-    AVI_USER: ${AVI_USER}
-    AVI_PASSWORD: ${AVI_PASSWORD}
-    AVI_CONTROLLER_ADDR: ${AVI_CONTROLLER_ADDR}
-    AVI_CONTROLLER_PORT: ${AVI_CONTROLLER_PORT}
-    AVI_SSL_VERIFY: ${AVI_SSL_VERIFY}
-    AVI_CLOUD_NAME: ${AVI_CLOUD_NAME}
+    salary_USER: ${salary_USER}
+    salary_PASSWORD: ${salary_PASSWORD}
+    salary_CONTROLLER_ADDR: ${salary_CONTROLLER_ADDR}
+    salary_CONTROLLER_PORT: ${salary_CONTROLLER_PORT}
+    salary_SSL_VERIFY: ${salary_SSL_VERIFY}
+    salary_CLOUD_NAME: ${salary_CLOUD_NAME}
     LB_TARGET_RANCHER_SUFFIX: ${LB_TARGET_RANCHER_SUFFIX}
   labels:
     io.rancher.container.create_agent: "true"

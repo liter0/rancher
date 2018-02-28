@@ -1,5 +1,5 @@
 name: 彩色打印管理
 description: |
-  无.
-version: 5.1.0-201605-GA
-category: ECM
+  用户可以向打印管理岗人员提交打印申请，每次可以提交多个文件，并可注明打印要求.
+version: 0.0.1
+category: BMXD
